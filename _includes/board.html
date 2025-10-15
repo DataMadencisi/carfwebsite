@@ -1,1 +1,22 @@
+<section class="section">
+  <h2>Yönetim Kurulu</h2>
+  <p>CARF'ın stratejik yönetimi, akademi, özel sektör ve kamu kurumlarının temsilcilerinden oluşur.</p>
+
+  <div class="board-grid">
+    {% for m in site.data.board %}
+    <figure class="board-card">
+      <div class="thumb">
+        <img 
+          src="{{ '/assets/img/members/' | append: m.photo | relative_url }}" 
+          alt="{{ m.name }}" loading="lazy" decoding="async">
+      </div>
+      <figcaption>
+        <strong>{{ m.name }}</strong><br>
+        <span>{{ m.role }}</span><br>
+        <em>{{ m.org }}</em>
+      </figcaption>
+    </figure>
+    {% endfor %}
+  </div>
+</section>
 
