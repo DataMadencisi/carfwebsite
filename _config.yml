@@ -1,1 +1,7 @@
+title: "CARF"
+description: "Finans Uygulama ve Araştırma Merkezi"
+url: "https://datamadencisi.github.io"
+baseurl: "/carfwebsite"
+theme: null
+markdown: kramdown
 
