@@ -1,8 +1,8 @@
 # Site settings
-title: CARF - Finans Uygulama ve Araştırma Merkezi
-description: Finans Uygulama ve Araştırma Merkezi - Tematik Araştırma Altyapısı
-baseurl: "/carfwebsite" # GitHub repo name
-url: "https://datamadencisi.github.io" # GitHub username
+title: CARF - Finans Araştırmaları Merkezi
+description: Boğaziçi Üniversitesi Finans Araştırmaları Merkezi
+baseurl: "/carfwebsite" # Your GitHub repo name
+url: "https://YOUR-USERNAME.github.io" # Replace with your GitHub username
 
 # Build settings
 markdown: kramdown
