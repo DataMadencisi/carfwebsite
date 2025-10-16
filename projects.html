@@ -1,12 +1,13 @@
 ---
 layout: default
 title: Projeler
+permalink: /projects/
 ---
 
 <div class="container">
     <section class="section">
         <h1>Projeler</h1>
-        <p>CARF'ta yürütülen ve tamamlanan projelerdir.</p>
+        <p>CARF'ta yürütülen ve tamamlanan projeler</p>
 
         <div class="timeline">
             {% assign sorted_projects = site.projects | sort: 'year' | reverse %}
@@ -19,7 +20,7 @@ title: Projeler
                 {% if project.status %}
                 <p><strong>Durum:</strong> {{ project.status }}</p>
                 {% endif %}
-                <p>{{ project.excerpt }}</p>
+                <p>{{ project.excerpt | strip_html | truncatewords: 50 }}</p>
                 <a href="{{ project.url | relative_url }}" class="read-more">Detayları görüntüle →</a>
             </div>
             {% endfor %}
