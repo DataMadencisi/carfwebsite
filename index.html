@@ -1,0 +1,126 @@
+---
+layout: default
+title: Ana Sayfa
+---
+
+<section class="hero">
+    <div class="hero-content">
+        <h2>Sürdürülebilir Finans ve Teknoloji Araştırmaları</h2>
+        <p>Disiplinler arası araştırmalarla, finans ve teknoloji odaklı çözümler üreterek küresel bir cazibe merkezi olmak</p>
+    </div>
+</section>
+
+<div class="container">
+    <section id="about" class="section">
+        <h2>Hakkımızda</h2>
+        <p>CARF (Center for Applied Research in Finance), 2014 yılında Boğaziçi Üniversitesi bünyesinde kurulmuştur. 2022 yılında gerçekleştirilen stratejik birleşme ile "Kurumsal Yönetim ve Finansal Düzenleme Uygulama ve Araştırma Merkezi" ile "Sürdürülebilir Kalkınma ve Temiz Üretim Uygulama ve Araştırma Merkezi" faaliyetlerini bünyesine katmıştır.</p>
+        
+        <p style="margin-top: 1rem;">2025 yılı itibarıyla, 6550 sayılı Kanun kapsamında ulusal araştırma altyapısı olarak tanınan CARF, <strong>"İleri Araştırma Laboratuvarı"</strong> statüsüyle 5 yıllık bir dönem için yetkilendirilmiştir.</p>
+
+        <div class="stats">
+            {% for stat in site.stats %}
+            <div class="stat-card">
+                <div class="stat-number">{{ stat.number }}</div>
+                <div class="stat-label">{{ stat.label }}</div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <h3>Misyon ve Vizyon</h3>
+        <p><strong>Misyon:</strong> Sürdürülebilir kalkınma hedefleri doğrultusunda disiplinler arası çalışmalar yapmak, kamu ve özel sektör etkileşimini güçlendirmek, finans ve teknoloji odaklı çözümler üretmek.</p>
+        
+        <p style="margin-top: 1rem;"><strong>Vizyon:</strong> Finansı "gelişen teknolojiler", "sürdürülebilirlik" ve "kurumsal yönetim" boyutlarıyla ele alarak yaptığı çalışmalar ve sunduğu çözümler ile küresel bir cazibe merkezi olmak.</p>
+
+        <h3>Tarihçe</h3>
+        <p>Finansal Uygulama ve Araştırma Merkezi (CARF) 2014 yılında Boğaziçi Üniversitesi bünyesinde kurulmuştur. 2014-2023 yılları arasında finansal yönetim, kurumsal finans, finansal teknolojiler gibi alanlarda faaliyet gösteren CARF, tüm dünyada yaşanan gelişmeler doğrultusunda ülkemizin ihtiyaçlarını karşılamaya katkı sunmak için merkez çalışmaların kapsamının genişletilmesi ihtiyacını tespit etmiştir.</p>
+        
+        <p style="margin-top: 1rem;">Çevre tahribatının artması, finansal kurum ve piyasalara olan güvenin azalması, sürdürülebilirlik konusundaki eksiklikler ve blokzincir gibi yeni teknolojilerin yaygınlaşması "kurumsal yönetim", "sürdürülebilirlik", "finansal teknolojiler" alanlarında bütüncül çalışmaları zorunlu kılmıştır.</p>
+    </section>
+
+    <section id="focus" class="section">
+        <h2>Odak Alanları</h2>
+        <div class="focus-areas">
+            <div class="focus-card">
+                <h4>🔗 Blokzincir ve Finansal Teknolojiler</h4>
+                <p style="margin-bottom: 1rem;"><em>Birincil Odak Alanı</em></p>
+                <ul>
+                    <li>Blokzincir altyapı standartları</li>
+                    <li>Akıllı sözleşmelerin hukuki entegrasyonu</li>
+                    <li>Merkeziyetsiz finans (DeFi) modelleri</li>
+                    <li>Yapay zeka destekli finansal yönetim</li>
+                    <li>Dijital varlıkların tokenizasyonu</li>
+                    <li>Düzenleyici teknolojiler (RegTech)</li>
+                </ul>
+            </div>
+
+            <div class="focus-card">
+                <h4>🌱 Sürdürülebilirlik ve Finans</h4>
+                <p style="margin-bottom: 1rem;"><em>İkincil Odak Alanı</em></p>
+                <ul>
+                    <li>Karbon piyasası tasarımı</li>
+                    <li>ESG veritabanı ve raporlama</li>
+                    <li>Dijital ürün pasaportu</li>
+                    <li>Yeşil tahviller ve etki yatırımı</li>
+                    <li>Çevresel risk analizi</li>
+                    <li>Yaşam Döngüsü Analizi (LCA)</li>
+                </ul>
+            </div>
+
+            <div class="focus-card">
+                <h4>📊 Finans ve Kurumsal Yönetim</h4>
+                <p style="margin-bottom: 1rem;"><em>Ortak Odak Alanı</em></p>
+                <ul>
+                    <li>Türkiye finansal veritabanı</li>
+                    <li>Sermaye piyasaları analitiği</li>
+                    <li>ESG uyumlu kurumsal yönetim</li>
+                    <li>Alternatif finansman modelleri</li>
+                    <li>Risk yönetimi ve etik finans</li>
+                    <li>Finansal okuryazarlık eğitimleri</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="board" class="section">
+        <h2>Yönetim Kurulu</h2>
+        <p style="margin-bottom: 2rem;">CARF'ın stratejik yönetimi, akademi, özel sektör ve kamu kurumlarından oluşan deneyimli bir kurul tarafından yürütülmektedir.</p>
+        
+        <div class="board-grid">
+            {% for member in site.data.board_members %}
+            <div class="board-member">
+                {% if member.photo %}
+                <div class="board-photo">
+                    <img src="{{ '/assets/images/board/' | append: member.photo | relative_url }}" alt="{{ member.name }}">
+                </div>
+                {% else %}
+                <div class="board-photo-placeholder">
+                    <span>{{ member.initials }}</span>
+                </div>
+                {% endif %}
+                <h4>{{ member.name }}</h4>
+                <p class="board-position"><strong>{{ member.position }}</strong></p>
+                <p class="board-affiliation">{{ member.affiliation }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>İletişim</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+            <div>
+                <h3>{{ site.addresses.main.name }}</h3>
+                <p>Boğaziçi Üniversitesi<br>
+                {{ site.addresses.main.street }}<br>
+                {{ site.addresses.main.district }} {{ site.addresses.main.postal }}, {{ site.addresses.main.city }}</p>
+            </div>
+            <div>
+                <h3>{{ site.addresses.secondary.name }}</h3>
+                <p>Boğaziçi Üniversitesi<br>
+                {{ site.addresses.secondary.building }}<br>
+                {{ site.addresses.secondary.street }}<br>
+                {{ site.addresses.secondary.district }}, {{ site.addresses.secondary.city }}</p>
+            </div>
+        </div>
+    </section>
+</div>
