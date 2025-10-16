@@ -1,7 +1,88 @@
-title: "CARF"
-description: "Finans Uygulama ve Araştırma Merkezi"
-url: "https://datamadencisi.github.io"
-baseurl: "/carfwebsite"
-theme: null
-markdown: kramdown
+# Site settings
+title: CARF - Finans Uygulama ve Araştırma Merkezi
+description: Finans Uygulama ve Araştırma Merkezi - Tematik Araştırma Altyapısı
+baseurl: "/carfwebsite" # GitHub repo name
+url: "https://datamadencisi.github.io" # GitHub username
 
+# Build settings
+markdown: kramdown
+theme: minima
+
+# Collections for modular content
+collections:
+  projects:
+    output: true
+    permalink: /projects/:title/
+  publications:
+    output: true
+    permalink: /publications/:year/
+  board_members:
+    output: false
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
+  - scope:
+      path: ""
+      type: "publications"
+    values:
+      layout: "publication"
+
+# Navigation
+navigation:
+  - title: Hakkımızda
+    url: /#about
+  - title: Odak Alanları
+    url: /#focus
+  - title: Projeler
+    url: /projects/
+  - title: Yayınlar
+    url: /publications/
+  - title: Yönetim Kurulu
+    url: /#board
+  - title: İletişim
+    url: /#contact
+
+# Site data
+organization:
+  name: "Boğaziçi Üniversitesi Finans Araştırmaları Merkezi"
+  short_name: "CARF"
+  english_name: "Center for Applied Research in Finance"
+  email: "carf@bogazici.edu.tr"
+  
+addresses:
+  main:
+    name: "Güney Kampüs"
+    street: "EMBA Binası"
+    district: "Bebek"
+    postal: "34342"
+    city: "İstanbul"
+  secondary:
+    name: "Kandilli Kampüsü"
+    building: "20/3 No'lu Bina"
+    street: "Vaniköy Caddesi, Eşref Bitlis Sokak"
+    district: "Üsküdar"
+    city: "İstanbul"
+
+# Statistics
+stats:
+  - number: "16"
+    label: "Doktoralı Araştırmacı Hedefi (2029)"
+  - number: "45+"
+    label: "WoS Yayın Hedefi (2030)"
+  - number: "14"
+    label: "Bilimsel Proje Hedefi (2030)"
+  - number: "2028"
+    label: "Mali Sürdürülebilirlik Hedefi"
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - README.md
