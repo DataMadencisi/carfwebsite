@@ -1,30 +1,58 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ page.title | default: site.title }}</title>
-  <meta name="description" content="{{ page.description | default: site.description }}">
-  <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
-  <link rel="icon" href="{{ '/assets/img/favicon.ico' | relative_url }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} | {{ site.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 <body>
-  <header>
-    <div class="container">
-      <strong>{{ site.title }}</strong>
-      {% include nav.html %}
-    </div>
-  </header>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo-section">
+                <h1>{{ site.organization.short_name }}</h1>
+                <p>{{ site.organization.name }}</p>
+                <p style="font-size: 0.85rem; opacity: 0.8;">{{ site.organization.english_name }}</p>
+            </div>
+        </div>
+    </header>
 
-  <main>
-    {{ content }}
-  </main>
+    <nav class="nav">
+        <div class="nav-content">
+            <ul>
+                {% for item in site.navigation %}
+                <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </nav>
 
-  <footer>
-    <div class="container">
-      © {{ "now" | date: "%Y" }} CARF – Finans Uygulama ve Araştırma Merkezi
-    </div>
-  </footer>
+    <main>
+        {{ content }}
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div>
+                <h4>{{ site.organization.short_name }}</h4>
+                <p>{{ site.organization.name }}</p>
+            </div>
+            <div>
+                <h4>Hızlı Bağlantılar</h4>
+                <p><a href="https://www.bogazici.edu.tr">Boğaziçi Üniversitesi</a></p>
+                <p><a href="{{ '/projects/' | relative_url }}">Projeler</a></p>
+                <p><a href="{{ '/publications/' | relative_url }}">Yayınlar</a></p>
+            </div>
+            <div>
+                <h4>İletişim</h4>
+                <p>E-posta: {{ site.organization.email }}</p>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.2);">
+            <p>&copy; 2025 {{ site.organization.short_name }}. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
 </body>
 </html>
-
