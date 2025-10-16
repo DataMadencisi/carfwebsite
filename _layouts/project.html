@@ -1,0 +1,116 @@
+---
+layout: default
+---
+
+<div class="container">
+    <article class="project-detail">
+        <header class="project-header">
+            <h1>{{ page.title }}</h1>
+            <div class="project-meta">
+                <span class="meta-item"><strong>Yıl:</strong> {{ page.year }}</span>
+                <span class="meta-item"><strong>Kurum:</strong> {{ page.organization }}</span>
+                {% if page.category %}
+                <span class="meta-item"><strong>Kategori:</strong> {{ page.category }}</span>
+                {% endif %}
+                {% if page.status %}
+                <span class="meta-item"><strong>Durum:</strong> {{ page.status }}</span>
+                {% endif %}
+            </div>
+        </header>
+
+        <div class="project-content">
+            {{ content }}
+        </div>
+
+        <footer class="project-footer">
+            <a href="{{ '/projects/' | relative_url }}" class="back-link">← Tüm Projelere Dön</a>
+        </footer>
+    </article>
+</div>
+
+<style>
+.project-detail {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.project-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #0d3b66;
+}
+
+.project-header h1 {
+    color: #0d3b66;
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.project-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.meta-item {
+    color: #666;
+}
+
+.project-content {
+    margin: 2rem 0;
+}
+
+.project-content h2 {
+    color: #0d3b66;
+    font-size: 1.6rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.project-content h3 {
+    color: #0d3b66;
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.project-content ul,
+.project-content ol {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+.project-content li {
+    margin-bottom: 0.5rem;
+}
+
+.project-footer {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #ddd;
+}
+
+.back-link {
+    display: inline-block;
+    color: #0d3b66;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border: 2px solid #0d3b66;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.back-link:hover {
+    background: #0d3b66;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .project-meta {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+</style>
