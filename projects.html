@@ -1,0 +1,95 @@
+---
+layout: default
+title: Projeler
+---
+
+<div class="container">
+    <section class="section">
+        <h1>Projeler</h1>
+        <p>CARF'ta yürütülen ve tamamlanan projeler</p>
+
+        <div class="timeline">
+            {% assign sorted_projects = site.projects | sort: 'year' | reverse %}
+            {% for project in sorted_projects %}
+            <div class="timeline-item">
+                <div class="timeline-year">{{ project.year }}</div>
+                <h3><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h3>
+                <p><strong>Kurum:</strong> {{ project.organization }}</p>
+                <p><strong>Kategori:</strong> {{ project.category }}</p>
+                {% if project.status %}
+                <p><strong>Durum:</strong> {{ project.status }}</p>
+                {% endif %}
+                <p>{{ project.excerpt }}</p>
+                <a href="{{ project.url | relative_url }}" class="read-more">Detayları görüntüle →</a>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+</div>
+
+<style>
+.timeline {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.timeline:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: #0d3b66;
+}
+
+.timeline-item {
+    margin-bottom: 3rem;
+    position: relative;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.timeline-item:before {
+    content: "";
+    position: absolute;
+    left: -2.4rem;
+    top: 0.3rem;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #0d3b66;
+}
+
+.timeline-year {
+    font-weight: 700;
+    color: #0d3b66;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-item h3 {
+    margin: 0.5rem 0;
+}
+
+.timeline-item h3 a {
+    color: #333;
+    text-decoration: none;
+}
+
+.timeline-item h3 a:hover {
+    color: #0d3b66;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #0d3b66;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+</style>
