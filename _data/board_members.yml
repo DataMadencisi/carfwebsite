@@ -2,43 +2,61 @@
   position: Yönetim Kurulu Başkanı
   affiliation: Boğaziçi Üniversitesi
   email: akgirayv@bogazici.edu.tr
+  photo: akgiray.jpg
+  initials: AVA
 
 - name: Doç. Dr. Ali Çoşkun
   position: Yönetim Kurulu Başkan Vekili
   affiliation: Boğaziçi Üniversitesi
   email: ali.coskun@bogazici.edu.tr
+  photo: coskun.jpg
+  initials: AÇ
 
 - name: Prof. Dr. Bekir Cem Avcı
   position: Yönetim Kurulu Üyesi
   affiliation: Boğaziçi Üniversitesi
   email: avci@bogazici.edu.tr
+  photo: avci.jpg
+  initials: BCA
 
 - name: Prof. Dr. Nilgün Kıran Cılız
   position: Yönetim Kurulu Üyesi
   affiliation: Boğaziçi Üniversitesi
   email: cilizn@bogazici.edu.tr
+  photo: ciliz.jpg
+  initials: NKC
 
 - name: Prof. Dr. Oğuzhan Özbaş
   position: Yönetim Kurulu Üyesi
   affiliation: Bilkent Üniversitesi
   email: oguzhan.ozbas@bilkent.edu.tr
+  photo: ozbas.jpg
+  initials: OÖ
 
 - name: Lütfü Haluk Bayraktar
   position: Yönetim Kurulu Üyesi
   affiliation: Baykar Teknoloji A.Ş.
   email: Haluk.bayraktar@baykartech.com
+  photo: bayraktar.jpg
+  initials: LHB
 
 - name: Murat Onuk
   position: Yönetim Kurulu Üyesi
   affiliation: Arz Portföy A.Ş.
   email: murat.onuk@arzportfoy.com
+  photo: onuk.jpg
+  initials: MO
 
 - name: Sadullah Uzun
   position: Yönetim Kurulu Üyesi
   affiliation: Sanayi ve Teknoloji Bakanlığı
   email: sadullah.uzun@sanayi.gov.tr
+  photo: uzun.jpg
+  initials: SU
 
 - name: Dr. Hasan Özçelik
   position: Yönetim Kurulu Üyesi
   affiliation: Kamu Gözetimi, Muhasebe ve Denetim Standartları Kurumu
   email: hasanozcelik@kgk.gov.tr
+  photo: ozcelik.jpg
+  initials: HÖ
